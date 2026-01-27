@@ -9,16 +9,16 @@
     <style>
         body {
             font-family: 'Pretendard', sans-serif;
-            background-color: #f0f2f5;
-            overflow-x: hidden;
+            background-color: #8db6cd;
+            overflow: hidden; /* Main scroll is inside the frame */
         }
         .retro-font {
             font-family: 'DungGeunMo', monospace;
         }
         .brand-title {
             font-family: 'Pretendard', 'Noto Serif KR', serif;
-            text-shadow: 0 0 10px rgba(255,255,255,0.15);
-            letter-spacing: 0.1em;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+            letter-spacing: 0.15em;
         }
         /* Glassmorphism utility */
         .glass {
@@ -32,17 +32,23 @@
         .bg-cy-orange {
             background-color: #ff6b00;
         }
-        /* Miniroom Perspective */
-        .miniroom-container {
-            perspective: 1000px;
-        }
-        .miniroom-floor {
-            transform: rotateX(60deg);
-            transform-origin: bottom;
-        }
         /* Custom header gradient */
         .header-gradient {
             background: linear-gradient(180deg, #111111 0%, #0a0a0a 100%);
+        }
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0,0,0,0.2);
         }
     </style>
 <script type="importmap">
