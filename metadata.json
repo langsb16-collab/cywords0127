@@ -1,0 +1,8 @@
+{
+  "name": "싸이월드 스타일 추억과 낭만월드-0127",
+  "description": "A relationship-centric digital memory platform combining nostalgic 2000s Cyworld vibes with 2026 AI technology. Features AI-powered diaries, 3D Minihomes, and relational time machines.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

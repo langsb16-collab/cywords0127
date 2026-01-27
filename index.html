@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추억과 낭만월드 - Cyworld 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&family=DungGeunMo&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #f0f2f5;
+            overflow-x: hidden;
+        }
+        .retro-font {
+            font-family: 'DungGeunMo', monospace;
+        }
+        .brand-title {
+            font-family: 'Pretendard', 'Noto Serif KR', serif;
+            text-shadow: 0 0 10px rgba(255,255,255,0.15);
+            letter-spacing: 0.1em;
+        }
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .cy-orange {
+            color: #ff6b00;
+        }
+        .bg-cy-orange {
+            background-color: #ff6b00;
+        }
+        /* Miniroom Perspective */
+        .miniroom-container {
+            perspective: 1000px;
+        }
+        .miniroom-floor {
+            transform: rotateX(60deg);
+            transform-origin: bottom;
+        }
+        /* Custom header gradient */
+        .header-gradient {
+            background: linear-gradient(180deg, #111111 0%, #0a0a0a 100%);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
