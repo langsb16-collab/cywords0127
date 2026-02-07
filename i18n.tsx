@@ -8,22 +8,15 @@ interface LocaleContextType {
 const LocaleContext = createContext<LocaleContextType>({ locale: 'ko', setLocale: () => {} });
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState('ko');
-  const [messages, setMessages] = useState<any>({});
+  const [locale, setLocaleState] = useState('ko');
   
   useEffect(() => {
     const saved = localStorage.getItem('locale') || 'ko';
-    setLocale(saved);
+    setLocaleState(saved);
   }, []);
-  
-  useEffect(() => {
-    import(`./locales/${locale}/common.json`)
-      .then(m => setMessages(m.default))
-      .catch(() => import(`./locales/ko/common.json`).then(m => setMessages(m.default)));
-  }, [locale]);
 
   const changeLocale = (newLocale: string) => {
-    setLocale(newLocale);
+    setLocaleState(newLocale);
     localStorage.setItem('locale', newLocale);
     window.location.reload();
   };
