@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "siteName": "Dunia Kenangan dan Romansa",
+    "tagline": "AI menyimpan kenangan Anda"
+  },
+  "nav": {
+    "home": "Beranda",
+    "minihome": "Mini Halaman",
+    "diary": "Diary",
+    "photo": "Foto",
+    "club": "Klub",
+    "guest": "Kenangan",
+    "jukebox": "Toko"
+  },
+  "buttons": {
+    "submit": "Kirim",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "edit": "Edit",
+    "delete": "Hapus",
+    "follow": "Ikuti",
+    "unfollow": "Berhenti mengikuti",
+    "buyNow": "Beli sekarang"
+  },
+  "home": {
+    "greeting": "Selamat hari",
+    "visitor": "Pengunjung",
+    "mood": "Suasana hati",
+    "today": "Hari ini",
+    "viewAll": "Lihat semua"
+  }
+}

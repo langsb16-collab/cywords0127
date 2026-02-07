@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "siteName": "Memory & Romance World",
+    "tagline": "AI preserves your memories"
+  },
+  "nav": {
+    "home": "Home",
+    "minihome": "Mini Homepage",
+    "diary": "Diary",
+    "photo": "Photos",
+    "club": "Club",
+    "guest": "Memories",
+    "jukebox": "Store"
+  },
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "follow": "Follow",
+    "unfollow": "Unfollow",
+    "buyNow": "Buy Now"
+  },
+  "home": {
+    "greeting": "Good day",
+    "visitor": "Visitor",
+    "mood": "Mood",
+    "today": "Today",
+    "viewAll": "View All"
+  }
+}

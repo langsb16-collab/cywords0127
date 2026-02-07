@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { useTranslations } from '../i18n.tsx';
+import LanguageSwitcher from './LanguageSwitcher.tsx';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -8,14 +10,16 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab }) => {
+  const t = useTranslations('common');
+  
   const tabs = [
-    { id: 'home', label: '홈', icon: '🏠' },
-    { id: 'minihome', label: '미니홈피', icon: '🖼️' },
-    { id: 'diary', label: '다이어리', icon: '✍️' },
-    { id: 'photo', label: '사진첩', icon: '📸' },
-    { id: 'club', label: '클럽', icon: '🏘️' },
-    { id: 'guest', label: '추억', icon: '⏳' },
-    { id: 'jukebox', label: '상점', icon: '💎' },
+    { id: 'home', label: t('nav.home'), icon: '🏠' },
+    { id: 'minihome', label: t('nav.minihome'), icon: '🖼️' },
+    { id: 'diary', label: t('nav.diary'), icon: '✍️' },
+    { id: 'photo', label: t('nav.photo'), icon: '📸' },
+    { id: 'club', label: t('nav.club'), icon: '🏘️' },
+    { id: 'guest', label: t('nav.guest'), icon: '⏳' },
+    { id: 'jukebox', label: t('nav.jukebox'), icon: '💎' },
   ];
 
   return (
@@ -32,13 +36,14 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab }) =>
               <div className="w-3 h-3 bg-amber-500 rounded-full" />
               <div className="w-3 h-3 bg-emerald-500 rounded-full" />
             </div>
-            {/* Title: 추억과 낭만월드 */}
+            {/* Title */}
             <h1 className="brand-title text-white text-lg md:text-xl lg:text-2xl font-bold tracking-widest whitespace-nowrap">
-              추억과 낭만월드
+              {t('meta.siteName')}
             </h1>
           </div>
 
           <div className="flex items-center space-x-6">
+            <LanguageSwitcher />
             <div className="flex items-center text-[#7CFC9F] text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">
                <span className="hidden sm:inline mr-2 text-white/30 tracking-normal">●</span>
                <span className="hidden sm:inline">LIVE SYNC ACTIVE</span>
@@ -117,24 +122,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab }) =>
 
         </div>
 
-        {/* Floating Player (Mobile Optimized) */}
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-auto md:left-auto md:right-10 md:bottom-10 bg-white/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/40 rounded-full px-4 py-2.5 flex items-center space-x-4 z-[100] transition-all hover:scale-105 active:scale-95">
-          <div className="relative shrink-0">
-            <div className="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center animate-spin-slow">
-              <span className="text-white text-[10px]">💿</span>
-            </div>
-            <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-orange-500 rounded-full border-2 border-white" />
-          </div>
-          <div className="min-w-0 flex-1">
-            <div className="text-[9px] font-black text-gray-900 truncate uppercase tracking-tighter">Y (Please Tell Me Why)</div>
-            <div className="text-[7px] text-gray-400 font-bold truncate">Freestyle / 2026 Remix</div>
-          </div>
-          <div className="flex items-center space-x-2 text-gray-400">
-            <button className="p-1 hover:text-gray-900">⏮️</button>
-            <button className="p-1 hover:text-gray-900">⏸️</button>
-            <button className="p-1 hover:text-gray-900">⏭️</button>
-          </div>
-        </div>
+
       </div>
     </div>
   );

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "siteName": "回忆与浪漫世界",
+    "tagline": "AI保存您的回忆"
+  },
+  "nav": {
+    "home": "主页",
+    "minihome": "迷你主页",
+    "diary": "日记",
+    "photo": "相册",
+    "club": "俱乐部",
+    "guest": "回忆",
+    "jukebox": "商店"
+  },
+  "buttons": {
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "保存",
+    "edit": "编辑",
+    "delete": "删除",
+    "follow": "关注",
+    "unfollow": "取消关注",
+    "buyNow": "立即购买"
+  },
+  "home": {
+    "greeting": "美好的一天",
+    "visitor": "访客",
+    "mood": "心情",
+    "today": "今天",
+    "viewAll": "查看全部"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "siteName": "Monde des Souvenirs et Romance",
+    "tagline": "L'IA préserve vos souvenirs"
+  },
+  "nav": {
+    "home": "Accueil",
+    "minihome": "Mini Page",
+    "diary": "Journal",
+    "photo": "Photos",
+    "club": "Club",
+    "guest": "Souvenirs",
+    "jukebox": "Boutique"
+  },
+  "buttons": {
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "follow": "Suivre",
+    "unfollow": "Ne plus suivre",
+    "buyNow": "Acheter maintenant"
+  },
+  "home": {
+    "greeting": "Bonne journée",
+    "visitor": "Visiteur",
+    "mood": "Humeur",
+    "today": "Aujourd'hui",
+    "viewAll": "Voir tout"
+  }
+}

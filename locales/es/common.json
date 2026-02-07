@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "siteName": "Mundo de Recuerdos y Romance",
+    "tagline": "La IA preserva tus recuerdos"
+  },
+  "nav": {
+    "home": "Inicio",
+    "minihome": "Mini Página",
+    "diary": "Diario",
+    "photo": "Fotos",
+    "club": "Club",
+    "guest": "Recuerdos",
+    "jukebox": "Tienda"
+  },
+  "buttons": {
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "follow": "Seguir",
+    "unfollow": "Dejar de seguir",
+    "buyNow": "Comprar ahora"
+  },
+  "home": {
+    "greeting": "Buen día",
+    "visitor": "Visitante",
+    "mood": "Estado de ánimo",
+    "today": "Hoy",
+    "viewAll": "Ver todo"
+  }
+}

@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react';
-import Layout from './components/Layout';
-import Home from './components/Home';
-import Diary from './components/Diary';
-import Store from './components/Store';
-import MemoryTimeline from './components/MemoryTimeline';
-import Miniroom from './components/Miniroom';
-import Clubs from './components/Clubs';
+import Layout from './components/Layout.tsx';
+import Home from './components/Home.tsx';
+import Diary from './components/Diary.tsx';
+import Store from './components/Store.tsx';
+import MemoryTimeline from './components/MemoryTimeline.tsx';
+import Miniroom from './components/Miniroom.tsx';
+import Clubs from './components/Clubs.tsx';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('home');

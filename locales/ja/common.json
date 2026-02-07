@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "siteName": "思い出とロマンスの世界",
+    "tagline": "AIがあなたの思い出を保管します"
+  },
+  "nav": {
+    "home": "ホーム",
+    "minihome": "ミニホームページ",
+    "diary": "日記",
+    "photo": "写真",
+    "club": "クラブ",
+    "guest": "思い出",
+    "jukebox": "ストア"
+  },
+  "buttons": {
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "edit": "編集",
+    "delete": "削除",
+    "follow": "フォロー",
+    "unfollow": "フォロー解除",
+    "buyNow": "今すぐ購入"
+  },
+  "home": {
+    "greeting": "良い一日を",
+    "visitor": "訪問者",
+    "mood": "気分",
+    "today": "今日",
+    "viewAll": "すべて表示"
+  }
+}
