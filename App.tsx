@@ -16,8 +16,6 @@ const App: React.FC = () => {
     switch (activeTab) {
       case 'home':
         return <Home />;
-      case 'minihome':
-        return <Miniroom />;
       case 'diary':
         return <Diary />;
       case 'photo':
