@@ -64,7 +64,24 @@ const Home: React.FC = () => {
               <p className="text-sm md:text-base text-gray-400 mb-10 max-w-md leading-relaxed">
                 당시 작성했던 일기와 12장의 사진이 보관되어 있습니다. AI가 이 기억을 바탕으로 특별한 추억 영상을 제작했습니다.
               </p>
-              <button className="bg-white text-black px-8 py-4 rounded-full text-xs font-black hover:bg-orange-500 hover:text-white transition-all transform hover:translate-x-3 flex items-center shadow-2xl">
+              <button 
+                onClick={async () => {
+                  try {
+                    const res = await fetch('/api/memory/video', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ photoKey: 'sample-memory' })
+                    });
+                    const data = await res.json();
+                    if (data.success) {
+                      window.open(data.videoUrl, '_blank');
+                    }
+                  } catch (error) {
+                    alert('영상 로드 중 오류가 발생했습니다.');
+                  }
+                }}
+                className="bg-white text-black px-8 py-4 rounded-full text-xs font-black hover:bg-orange-500 hover:text-white transition-all transform hover:translate-x-3 flex items-center shadow-2xl cursor-pointer"
+              >
                 기억 복원하여 영상 보기 <span className="ml-2">🎞️</span>
               </button>
             </div>

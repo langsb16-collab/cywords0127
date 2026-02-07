@@ -14,6 +14,22 @@ const Clubs: React.FC = () => {
   const [activeView, setActiveView] = useState<'hub' | 'alumni' | 'band'>('hub');
   const [selectedGroupName, setSelectedGroupName] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [clubName, setClubName] = useState('');
+  const [clubDesc, setClubDesc] = useState('');
+
+  const createClub = async () => {
+    const res = await fetch('/api/clubs/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: clubName, desc: clubDesc })
+    });
+    const data = await res.json();
+    alert(`모임 생성 완료: ${data.name}`);
+    setShowModal(false);
+    setClubName('');
+    setClubDesc('');
+  };
 
   const handleAlumniConfirm = (name: string) => {
     alert(`${name}님에게 일촌 신청을 보냈습니다!`);
@@ -50,7 +66,10 @@ const Clubs: React.FC = () => {
           <h2 className="text-3xl font-black text-gray-900 tracking-tight">감성 클럽 & 밴드</h2>
           <p className="text-sm text-gray-400 font-bold mt-2">"잃어버린 관계를 찾고, 소중한 모임을 영원히 기록하세요."</p>
         </div>
-        <button className="bg-cy-orange text-white px-6 py-3 rounded-full text-xs font-black shadow-lg hover:shadow-orange-500/30 transition-all">
+        <button 
+          onClick={() => setShowModal(true)}
+          className="bg-cy-orange text-white px-6 py-3 rounded-full text-xs font-black shadow-lg hover:shadow-orange-500/30 transition-all cursor-pointer"
+        >
           + 새로운 모임 만들기
         </button>
       </header>
@@ -150,6 +169,42 @@ const Clubs: React.FC = () => {
             </div>
          </div>
       </section>
+
+      {showModal && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setShowModal(false)}>
+          <div className="bg-white rounded-3xl p-8 max-w-md w-full space-y-6" onClick={e => e.stopPropagation()}>
+            <h2 className="text-2xl font-black text-gray-900">새 모임 만들기</h2>
+            <input 
+              type="text"
+              placeholder="모임 이름"
+              value={clubName}
+              onChange={e => setClubName(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-orange-400 outline-none"
+            />
+            <textarea
+              placeholder="모임 설명"
+              value={clubDesc}
+              onChange={e => setClubDesc(e.target.value)}
+              rows={4}
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-orange-400 outline-none resize-none"
+            />
+            <div className="flex gap-3">
+              <button 
+                onClick={createClub}
+                className="flex-1 bg-cy-orange text-white py-3 rounded-xl font-black hover:bg-orange-600 transition-colors"
+              >
+                생성하기
+              </button>
+              <button 
+                onClick={() => setShowModal(false)}
+                className="flex-1 bg-gray-100 text-gray-700 py-3 rounded-xl font-black hover:bg-gray-200 transition-colors"
+              >
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
