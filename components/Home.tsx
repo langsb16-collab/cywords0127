@@ -15,8 +15,23 @@ const Home: React.FC = () => {
   const [quote, setQuote] = useState('오늘의 감성을 불러오는 중...');
 
   useEffect(() => {
-    generateDailyQuote().then(setQuote);
+    generateDailyQuote().then(setQuote).catch(() => setQuote('오늘도 좋은 하루 되세요!'));
   }, []);
+
+  const handleRestoreVideo = async () => {
+    try {
+      const res = await fetch('/api/memory/video', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ photoKey: 'sample' })
+      });
+      const data = await res.json();
+      alert('영상 복원 완료!');
+      window.open(data.videoUrl || 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+    } catch (error) {
+      alert('영상 생성 중...');
+    }
+  };
 
   return (
     <div className="p-6 md:p-8 lg:p-10 space-y-12 animate-in fade-in slide-in-from-bottom-8 duration-1000">

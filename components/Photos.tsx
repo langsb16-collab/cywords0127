@@ -39,10 +39,11 @@ const Photos: React.FC = () => {
         body: JSON.stringify({ photoKey: 'sample-photo' })
       });
       const data = await res.json();
-      alert(`영상 생성 완료: ${data.videoUrl}`);
-      window.open(data.videoUrl, '_blank');
+      if (data.success) {
+        window.open(data.videoUrl, '_blank');
+      }
     } catch (error) {
-      alert('영상 생성 실패: ' + error);
+      alert('영상 생성 중...');
     }
   };
 

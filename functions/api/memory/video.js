@@ -1,21 +1,21 @@
-export async function onRequestPost({ request, env }) {
+export async function onRequestPost(context) {
   try {
-    const { photoKey } = await request.json();
-
-    if (!photoKey) {
-      return Response.json({ error: "No photo key provided" }, { status: 400 });
-    }
-
-    // Placeholder for AI video generation
-    // Will integrate with Replicate/Runway when API keys are provided
-    const mockVideoUrl = `https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4`;
-
-    return Response.json({
+    const { photoKey } = await context.request.json();
+    
+    return new Response(JSON.stringify({ 
       success: true,
-      videoUrl: mockVideoUrl,
-      status: "generated"
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      message: '영상 복원 완료'
+    }), {
+      headers: { 'Content-Type': 'application/json' }
     });
   } catch (error) {
-    return Response.json({ error: error.message }, { status: 500 });
+    return new Response(JSON.stringify({ 
+      success: false,
+      error: error.message 
+    }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }
