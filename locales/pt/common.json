@@ -27,6 +27,13 @@
     "visitor": "Visitante",
     "mood": "Humor",
     "today": "Hoje",
-    "viewAll": "Ver tudo"
+    "viewAll": "Ver tudo",
+    "friendsActivity": "Atividade de amigos em tempo real",
+    "memoryCard": {
+      "yearsAgo": "Anos atrás hoje",
+      "watchVideo": "Assistir vídeo de memória"
+    },
+    "visitorLog": "Registro de visitantes",
+    "moodFlow": "Fluxo de humor semanal"
   }
 }

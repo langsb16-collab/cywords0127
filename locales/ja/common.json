@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteName": "思い出とロマンスの世界",
-    "tagline": "AIがあなたの思い出を保管します"
+    "tagline": "AIがあなたの思い出を保存します"
   },
   "nav": {
     "home": "ホーム",
@@ -27,6 +27,13 @@
     "visitor": "訪問者",
     "mood": "気分",
     "today": "今日",
-    "viewAll": "すべて表示"
+    "viewAll": "すべて表示",
+    "friendsActivity": "友達のリアルタイム活動",
+    "memoryCard": {
+      "yearsAgo": "年前の今日",
+      "watchVideo": "思い出の動画を見る"
+    },
+    "visitorLog": "訪問者ログ",
+    "moodFlow": "今週の気分の流れ"
   }
 }

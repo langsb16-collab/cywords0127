@@ -27,6 +27,13 @@
     "visitor": "Visitor",
     "mood": "Mood",
     "today": "Today",
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "friendsActivity": "Friends' Real-time Activity",
+    "memoryCard": {
+      "yearsAgo": "Years Ago Today",
+      "watchVideo": "Watch Memory Video"
+    },
+    "visitorLog": "Visitor Log",
+    "moodFlow": "Weekly Mood Flow"
   }
 }

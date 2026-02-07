@@ -5,8 +5,8 @@
   },
   "nav": {
     "home": "Beranda",
-    "minihome": "Mini Halaman",
-    "diary": "Diary",
+    "minihome": "Halaman Mini",
+    "diary": "Buku Harian",
     "photo": "Foto",
     "club": "Klub",
     "guest": "Kenangan",
@@ -23,10 +23,17 @@
     "buyNow": "Beli sekarang"
   },
   "home": {
-    "greeting": "Selamat hari",
+    "greeting": "Selamat siang",
     "visitor": "Pengunjung",
     "mood": "Suasana hati",
     "today": "Hari ini",
-    "viewAll": "Lihat semua"
+    "viewAll": "Lihat semua",
+    "friendsActivity": "Aktivitas teman secara real-time",
+    "memoryCard": {
+      "yearsAgo": "Tahun yang lalu hari ini",
+      "watchVideo": "Tonton video kenangan"
+    },
+    "visitorLog": "Log pengunjung",
+    "moodFlow": "Aliran suasana hati mingguan"
   }
 }

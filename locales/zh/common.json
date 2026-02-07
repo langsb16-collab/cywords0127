@@ -27,6 +27,13 @@
     "visitor": "访客",
     "mood": "心情",
     "today": "今天",
-    "viewAll": "查看全部"
+    "viewAll": "查看全部",
+    "friendsActivity": "好友实时动态",
+    "memoryCard": {
+      "yearsAgo": "年前的今天",
+      "watchVideo": "观看回忆视频"
+    },
+    "visitorLog": "访客记录",
+    "moodFlow": "本周心情曲线"
   }
 }

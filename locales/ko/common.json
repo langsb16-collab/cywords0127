@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteName": "추억과 낭만월드",
-    "tagline": "당신의 추억을 AI가 보관합니다"
+    "tagline": "AI가 추억을 보관합니다"
   },
   "nav": {
     "home": "홈",
@@ -16,10 +16,10 @@
     "submit": "제출",
     "cancel": "취소",
     "save": "저장",
-    "edit": "수정",
+    "edit": "편집",
     "delete": "삭제",
-    "follow": "일촌신청",
-    "unfollow": "일촌끊기",
+    "follow": "팔로우",
+    "unfollow": "언팔로우",
     "buyNow": "구매하기"
   },
   "home": {
@@ -27,6 +27,13 @@
     "visitor": "방문자",
     "mood": "기분",
     "today": "오늘",
-    "viewAll": "전체보기"
+    "viewAll": "전체보기",
+    "friendsActivity": "일촌들의 실시간 소식",
+    "memoryCard": {
+      "yearsAgo": "년 전 오늘",
+      "watchVideo": "기억 복원하여 영상 보기"
+    },
+    "visitorLog": "방문자 기록",
+    "moodFlow": "주간 기분 흐름"
   }
 }

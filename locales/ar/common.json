@@ -5,7 +5,7 @@
   },
   "nav": {
     "home": "الرئيسية",
-    "minihome": "صفحة صغيرة",
+    "minihome": "صفحة مصغرة",
     "diary": "يوميات",
     "photo": "الصور",
     "club": "النادي",
@@ -16,17 +16,24 @@
     "submit": "إرسال",
     "cancel": "إلغاء",
     "save": "حفظ",
-    "edit": "تعديل",
+    "edit": "تحرير",
     "delete": "حذف",
     "follow": "متابعة",
     "unfollow": "إلغاء المتابعة",
-    "buyNow": "اشتري الآن"
+    "buyNow": "اشتر الآن"
   },
   "home": {
     "greeting": "يوم سعيد",
     "visitor": "زائر",
     "mood": "المزاج",
     "today": "اليوم",
-    "viewAll": "عرض الكل"
+    "viewAll": "عرض الكل",
+    "friendsActivity": "نشاط الأصدقاء في الوقت الفعلي",
+    "memoryCard": {
+      "yearsAgo": "منذ سنوات اليوم",
+      "watchVideo": "شاهد فيديو الذاكرة"
+    },
+    "visitorLog": "سجل الزوار",
+    "moodFlow": "تدفق المزاج الأسبوعي"
   }
 }

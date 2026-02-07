@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { generateDailyQuote } from '../services/geminiService';
 import { FeedItem } from '../types';
+import { useTranslations } from '../i18n.tsx';
 
 const MOCK_FEED: FeedItem[] = [
   { id: '1', user: '민지', avatar: 'https://picsum.photos/seed/mj/40/40', content: '오늘 날씨가 너무 좋네요! 다들 산책 다녀오셨나요? 2026년 봄은 참 따뜻해요.', time: '2분 전', type: 'diary', likes: 12, comments: 4 },
@@ -10,6 +11,7 @@ const MOCK_FEED: FeedItem[] = [
 ];
 
 const Home: React.FC = () => {
+  const t = useTranslations('common');
   const [quote, setQuote] = useState('오늘의 감성을 불러오는 중...');
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const Home: React.FC = () => {
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div className="flex-1 space-y-3">
           <h2 className="text-3xl lg:text-4xl font-black text-gray-900 tracking-tight leading-none">
-            좋은 하루예요, <span className="text-cy-orange">김싸이</span>님!
+            {t('home.greeting')}, <span className="text-cy-orange">김싸이</span>님!
           </h2>
           <div className="inline-flex items-center text-xs font-bold text-orange-500 bg-orange-50 px-5 py-2.5 rounded-2xl border border-orange-100 shadow-sm">
             <span className="mr-2 text-base">🌤</span> {quote}
@@ -73,9 +75,9 @@ const Home: React.FC = () => {
             <div className="flex items-center justify-between px-2">
                <h3 className="text-2xl font-black text-gray-900 flex items-center tracking-tight">
                   <span className="w-3 h-3 bg-blue-500 rounded-full mr-4 shadow-lg shadow-blue-500/30" />
-                  일촌들의 실시간 소식
+                  {t('home.friendsActivity')}
                </h3>
-               <button className="text-[10px] font-black text-gray-400 hover:text-orange-500 tracking-widest uppercase transition-colors">View All Activities</button>
+               <button className="text-[10px] font-black text-gray-400 hover:text-orange-500 tracking-widest uppercase transition-colors">{t('home.viewAll')}</button>
             </div>
             
             <div className="grid grid-cols-1 gap-6">

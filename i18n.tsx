@@ -1,18 +1,31 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-const LocaleContext = createContext({ locale: 'ko', setLocale: (l: string) => {} });
+interface LocaleContextType {
+  locale: string;
+  setLocale: (l: string) => void;
+}
 
-export function LocaleProvider({ children }: { children: React.ReactNode }) {
+const LocaleContext = createContext<LocaleContextType>({ locale: 'ko', setLocale: () => {} });
+
+export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState('ko');
+  const [messages, setMessages] = useState<any>({});
   
   useEffect(() => {
     const saved = localStorage.getItem('locale') || 'ko';
     setLocale(saved);
   }, []);
   
+  useEffect(() => {
+    import(`./locales/${locale}/common.json`)
+      .then(m => setMessages(m.default))
+      .catch(() => import(`./locales/ko/common.json`).then(m => setMessages(m.default)));
+  }, [locale]);
+
   const changeLocale = (newLocale: string) => {
     setLocale(newLocale);
     localStorage.setItem('locale', newLocale);
+    window.location.reload();
   };
 
   return (
@@ -29,9 +42,9 @@ export function useTranslations(namespace: string = 'common') {
   const [messages, setMessages] = useState<any>({});
 
   useEffect(() => {
-    import(`../locales/${locale}/${namespace}.json`)
+    import(`./locales/${locale}/${namespace}.json`)
       .then(m => setMessages(m.default))
-      .catch(() => import(`../locales/ko/${namespace}.json`).then(m => setMessages(m.default)));
+      .catch(() => import(`./locales/ko/${namespace}.json`).then(m => setMessages(m.default)));
   }, [locale, namespace]);
 
   return (key: string) => {

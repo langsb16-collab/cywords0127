@@ -27,6 +27,13 @@
     "visitor": "Visitante",
     "mood": "Estado de ánimo",
     "today": "Hoy",
-    "viewAll": "Ver todo"
+    "viewAll": "Ver todo",
+    "friendsActivity": "Actividad de amigos en tiempo real",
+    "memoryCard": {
+      "yearsAgo": "Hace años hoy",
+      "watchVideo": "Ver video de recuerdo"
+    },
+    "visitorLog": "Registro de visitantes",
+    "moodFlow": "Flujo de ánimo semanal"
   }
 }
